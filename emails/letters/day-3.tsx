@@ -52,14 +52,14 @@ export default function Day3Email() {
             <Img
               src={`${BASE_URL}/assets/day-3/Mask-group.svg`}
               alt=""
-              style={{ position: "absolute", top: 0, left: "48px", width: "600px", height: "149px", maxWidth: "none", zIndex: -1, pointerEvents: "none" }}
+              style={{ position: "absolute", top: 0, left: "48px", width: "639px", height: "150px", maxWidth: "none", zIndex: -1, pointerEvents: "none" }}
             />
             <Img
               src={`${BASE_URL}/assets/day-3/Web-3.0-DeFi-2.0.svg`}
               alt="Web 3.0 DeFi 2.0"
               width="120"
               height="66"
-              style={{ position: "absolute", top: "48px", left: "65px", width: "120px", height: "66px", maxWidth: "none", zIndex: 1 }}
+              style={{ position: "absolute", top: "48px", left: "83px", width: "120px", height: "66px", maxWidth: "none", zIndex: 1 }}
             />
           </Section>
 
