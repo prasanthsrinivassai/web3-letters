@@ -142,18 +142,13 @@ export default function Day8Email() {
             alt=""
             style={{ position: "absolute", top: "4187px", left: "64px", width: "470px", height: "272px", opacity: 1, borderRadius: "5px" }}
           />
-          {/* DAO callout banner — sits behind the baked-in text in virtual-ecosystem.svg */}
-          <div
-            style={{
-              position: "absolute",
-              top: "5085px",
-              left: "0px",
-              width: "600px",
-              height: "160px",
-              backgroundColor: "#26262a",
-              borderRadius: "8px",
-              zIndex: -1,
-            }}
+          {/* rectangle-79 DAO callout background */}
+          <Img
+            src={`${BASE_URL}/assets/day-8/rectangle-79.png`}
+            width={600}
+            height={160}
+            alt=""
+            style={{ position: "absolute", top: "5085px", left: "0px", width: "600px", height: "160px", opacity: 1, zIndex: -1 }}
           />
           {/* group-1864 glow */}
           <Img
