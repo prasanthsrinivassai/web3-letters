@@ -279,12 +279,12 @@ export default function Day2Email() {
           <Link href="https://coinmarketcap.com/view/play-to-earn/" style={{ position: "absolute", top: "8674px", left: "45px", width: "483px", height: "120px", display: "block", zIndex: 2 }} />
           {/* Clickable overlays for each play-to-earn game name and the closing link,
               positioned over their baked-in text inside As-you-fathom.svg */}
-          <Link href="https://godsunchained.com" style={{ position: "absolute", top: "8794px", left: "45px", width: "200px", height: "24px", display: "block", zIndex: 2 }} />
-          <Link href="https://axieinfinity.com" style={{ position: "absolute", top: "8822px", left: "45px", width: "200px", height: "24px", display: "block", zIndex: 2 }} />
-          <Link href="https://plantvsundead.com" style={{ position: "absolute", top: "8850px", left: "45px", width: "200px", height: "24px", display: "block", zIndex: 2 }} />
-          <Link href="https://gala.games" style={{ position: "absolute", top: "8878px", left: "45px", width: "230px", height: "24px", display: "block", zIndex: 2 }} />
-          <Link href="https://illuvium.io" style={{ position: "absolute", top: "8906px", left: "45px", width: "200px", height: "24px", display: "block", zIndex: 2 }} />
-          <Link href="https://coinmarketcap.com/view/play-to-earn/" style={{ position: "absolute", top: "8977px", left: "45px", width: "180px", height: "24px", display: "block", zIndex: 2 }} />
+          <Link href="https://godsunchained.com" style={{ position: "absolute", top: "8818px", left: "45px", width: "123px", height: "18px", display: "block", zIndex: 2 }} />
+          <Link href="https://axieinfinity.com" style={{ position: "absolute", top: "8842px", left: "45px", width: "93px", height: "19px", display: "block", zIndex: 2 }} />
+          <Link href="https://plantvsundead.com" style={{ position: "absolute", top: "8866px", left: "45px", width: "125px", height: "18px", display: "block", zIndex: 2 }} />
+          <Link href="https://gala.games" style={{ position: "absolute", top: "8890px", left: "45px", width: "181px", height: "18px", display: "block", zIndex: 2 }} />
+          <Link href="https://illuvium.io" style={{ position: "absolute", top: "8914px", left: "45px", width: "66px", height: "18px", display: "block", zIndex: 2 }} />
+          <Link href="https://coinmarketcap.com/view/play-to-earn/" style={{ position: "absolute", top: "8984px", left: "161px", width: "38px", height: "18px", display: "block", zIndex: 2 }} />
 
           {/* It's time to Earn through Fun heading */}
           <Img
