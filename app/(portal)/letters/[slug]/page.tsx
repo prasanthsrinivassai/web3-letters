@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { render } from "@react-email/render";
+import { ResponsiveEmailFrame } from "@/components/ResponsiveEmailFrame";
 
 const emailMap: Record<string, () => Promise<{ default: () => React.ReactElement }>> = {
   "day-0": () => import("@/emails/letters/day-0"),
@@ -31,10 +32,8 @@ export default async function LetterPage({ params }: Props) {
   const html = await render(mod.default());
 
   return (
-    <iframe
-      srcDoc={html}
-      title={slug}
-      style={{ display: "block", width: "100%", height: "100vh", border: "none" }}
-    />
+    <div style={{ backgroundColor: "#0a0a1a", minHeight: "100vh", padding: "0" }}>
+      <ResponsiveEmailFrame html={html} title={slug} naturalWidth={600} />
+    </div>
   );
 }

@@ -1,11 +1,13 @@
 import Link from "next/link";
-import Image from "next/image";
+import { ScaleToFit } from "@/components/ScaleToFit";
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen overflow-y-auto bg-[#0a0a1a] flex items-start justify-center py-2 px-4">
 
-      {/* ── 600px centered card ───────────────────────────────────── */}
+      {/* ── 600px card, scaled to fit any viewport ───────────────────────────────────── */}
+      <div className="w-full" style={{ maxWidth: "600px" }}>
+      <ScaleToFit naturalWidth={600} naturalHeight={800}>
       <main className="w-[600px] h-[800px] mx-auto relative overflow-hidden flex flex-col bg-[#09040e] text-white border border-purple-900/30 rounded-none">
 
         {/* ══════════════════════════════════════════════════════════
@@ -298,6 +300,8 @@ export default function LandingPage() {
         </div>
 
       </main>
+      </ScaleToFit>
+      </div>
     </div>
   );
 }
