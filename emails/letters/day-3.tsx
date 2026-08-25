@@ -269,7 +269,7 @@ export default function Day3Email() {
             />
           </div>
           {/* Clickable overlay for the "link" word baked into DApps.svg */}
-          <Link href="https://web3isgoingreat.com" style={{ position: "absolute", top: "9263px", left: "134px", width: "28px", height: "17px", display: "block", zIndex: 2 }} />
+          <Link href="https://www.web3isgoinggreat.com" style={{ position: "absolute", top: "9263px", left: "134px", width: "28px", height: "17px", display: "block", zIndex: 2 }} />
           {/* Closing line rendered as real text so the emoji displays correctly, matching the SVG's purple */}
           <Text style={{ ...bodyText, position: "absolute" as const, top: "9545px", left: "58px", width: "481px", color: "#B12CFA", fontWeight: 700, margin: 0 }}>
             (...and Kudos on heading strong towards a cypherpunk dream of decentralized future. ✌️)
