@@ -29,8 +29,18 @@ export function ResponsiveEmailFrame({
   function measure() {
     const doc = iframeRef.current?.contentDocument;
     const height = doc?.body?.scrollHeight;
-    if (height && height > 0) setNaturalHeight(height);
+    if (height && height > 0) setNaturalHeight(height + 2);
   }
+
+  // The iframe is its own browsing context, so it can show its own native
+  // scrollbar independent of the outer page — even a 1px rounding gap
+  // between the measured content height and the iframe's box triggers it.
+  // Force it off inside the iframe's own document, on top of the legacy
+  // `scrolling="no"` attribute which browsers still honor.
+  const noScrollbarStyle = `<style>html,body{overflow:hidden!important;scrollbar-width:none!important}html::-webkit-scrollbar,body::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}</style>`;
+  const patchedHtml = html.includes("</head>")
+    ? html.replace("</head>", `${noScrollbarStyle}</head>`)
+    : noScrollbarStyle + html;
 
   return (
     <div
@@ -53,14 +63,16 @@ export function ResponsiveEmailFrame({
       >
         <iframe
           ref={iframeRef}
-          srcDoc={html}
+          srcDoc={patchedHtml}
           title={title}
+          scrolling="no"
           onLoad={measure}
           style={{
             width: `${naturalWidth}px`,
             height: `${naturalHeight}px`,
             border: "none",
             display: "block",
+            overflow: "hidden",
           }}
         />
       </div>
