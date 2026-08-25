@@ -172,7 +172,7 @@ export default function LandingPage() {
           />
 
           {/* CTA buttons */}
-          <div className="relative z-10 flex flex-col sm:flex-row gap-2 mb-5">
+          <div className="relative z-10 flex flex-row gap-2 mb-5">
             <Link
               href="/sign-up"
               className="text-center text-white transition-colors hover:brightness-110"
