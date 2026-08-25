@@ -4,6 +4,7 @@ import {
   Container,
   Section,
   Text,
+  Link,
   Head,
   Preview,
   Img,
@@ -267,6 +268,8 @@ export default function Day3Email() {
               style={{ position: "absolute", top: 0, left: 0, width: "481px", height: "1731px", maxWidth: "none" }}
             />
           </div>
+          {/* Clickable overlay for the "link" word baked into DApps.svg */}
+          <Link href="https://web3isgoingreat.com" style={{ position: "absolute", top: "9263px", left: "134px", width: "28px", height: "17px", display: "block", zIndex: 2 }} />
           {/* Closing line rendered as real text so the emoji displays correctly, matching the SVG's purple */}
           <Text style={{ ...bodyText, position: "absolute" as const, top: "9545px", left: "58px", width: "481px", color: "#B12CFA", fontWeight: 700, margin: 0 }}>
             (...and Kudos on heading strong towards a cypherpunk dream of decentralized future. ✌️)
