@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { render } from "@react-email/render";
-import Link from "next/link";
 
 const emailMap: Record<string, () => Promise<{ default: () => React.ReactElement }>> = {
   "day-0": () => import("@/emails/letters/day-0"),
@@ -31,73 +30,11 @@ export default async function LetterPage({ params }: Props) {
   const mod = await loader();
   const html = await render(mod.default());
 
-  const day = parseInt(slug.replace("day-", ""), 10);
-  const prevSlug = day > 0 ? `day-${day - 1}` : null;
-  const nextSlug = day < 9 ? `day-${day + 1}` : null;
-
-  const wrapStyle = {
-    position: "fixed" as const,
-    top: "50%",
-    transform: "translateY(-50%)",
-    zIndex: 1000,
-    display: "flex",
-    flexDirection: "column" as const,
-    alignItems: "center" as const,
-    gap: "6px",
-  };
-
-  const buttonStyle = {
-    width: "48px",
-    height: "48px",
-    borderRadius: "50%",
-    backgroundColor: "#000000",
-    border: "2px solid #ffffff",
-    color: "#ffffff",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    textDecoration: "none",
-    fontSize: "32px",
-    fontWeight: 700,
-    fontFamily: "Arial, sans-serif",
-    boxShadow: "0 2px 8px rgba(0,0,0,0.5)",
-  };
-
-  const labelStyle = {
-    fontSize: "11px",
-    fontWeight: 600,
-    fontFamily: "Arial, sans-serif",
-    color: "#ffffff",
-    backgroundColor: "rgba(10,10,26,0.85)",
-    border: "1px solid rgba(255,255,255,0.2)",
-    borderRadius: "10px",
-    padding: "2px 8px",
-    whiteSpace: "nowrap" as const,
-  };
-
   return (
-    <>
-      {prevSlug && (
-        <div style={{ ...wrapStyle, left: "16px" }}>
-          <Link href={`/letters/${prevSlug}`} replace aria-label={`Go to Day ${day - 1}`} style={buttonStyle}>
-            ←
-          </Link>
-          <span style={labelStyle}>Day {day - 1}</span>
-        </div>
-      )}
-      {nextSlug && (
-        <div style={{ ...wrapStyle, right: "16px" }}>
-          <Link href={`/letters/${nextSlug}`} replace aria-label={`Go to Day ${day + 1}`} style={buttonStyle}>
-            →
-          </Link>
-          <span style={labelStyle}>Day {day + 1}</span>
-        </div>
-      )}
-      <iframe
-        srcDoc={html}
-        title={slug}
-        style={{ display: "block", width: "100%", height: "100vh", border: "none" }}
-      />
-    </>
+    <iframe
+      srcDoc={html}
+      title={slug}
+      style={{ display: "block", width: "100%", height: "100vh", border: "none" }}
+    />
   );
 }
