@@ -31,10 +31,10 @@ export default function ConfirmRegistrationEmail({
         <Container style={container}>
           {/* Header with assets */}
           <Section style={header}>
-            <Img src={`${BASE_URL}/assets/upper-plane.svg`} width="600" height="66" alt="" style={{ display: "block" }} />
+            <Img src={`${BASE_URL}/assets/Upper-plane.png`} width="600" height="66" alt="" style={{ display: "block" }} />
             <Section style={headerInner}>
               <Img src={`${BASE_URL}/assets/e42-logo.svg`} width="116" height="26" alt="Enhance 42" style={{ marginBottom: "16px" }} />
-              <Img src={`${BASE_URL}/assets/wormhole.svg`} width="120" height="122" alt="" style={{ opacity: 0.7 }} />
+              <Img src={`${BASE_URL}/assets/Wormhole.png`} width="120" height="122" alt="" style={{ opacity: 0.7 }} />
             </Section>
           </Section>
 
@@ -45,11 +45,11 @@ export default function ConfirmRegistrationEmail({
               <Img src={`${BASE_URL}/assets/voila.svg`} width="120" alt="Voilà!" style={{ display: "inline-block", marginLeft: "8px", verticalAlign: "middle" }} />
             </Section>
             <Text style={body_text}>
-              You made it, <Link href="#" style={link}>{firstName}</Link>.
+              You made it, {firstName}.
             </Text>
             <Text style={body_text}>
               Thanks a ton for hopping onboard with us on this{" "}
-              <Link href="#" style={link}>
+              <Link href={`${BASE_URL}/letters`} style={link}>
                 Blockchain and Cryptocurrencies 101
               </Link>{" "}
               journey. Pretty excited to have you here.

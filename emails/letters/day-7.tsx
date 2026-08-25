@@ -9,46 +9,6 @@ import {
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
-/** Aspect-correct placeholder pinned to its Figma rect, until the real
- *  image is exported from Figma into /assets/day-7/. */
-function ImgBox({
-  label,
-  top,
-  left,
-  width,
-  height,
-}: {
-  label: string;
-  top: number;
-  left: number;
-  width: number;
-  height: number;
-}) {
-  return (
-    <div
-      style={{
-        position: "absolute",
-        top: `${top}px`,
-        left: `${left}px`,
-        width: `${width}px`,
-        height: `${height}px`,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        color: "rgba(255,255,255,0.35)",
-        fontFamily: "'Exo 2', sans-serif",
-        fontSize: "13px",
-        letterSpacing: "0.5px",
-        padding: "0 16px",
-        boxSizing: "border-box" as const,
-      }}
-    >
-      {label} · {Math.round(width)}×{Math.round(height)}
-    </div>
-  );
-}
-
 export default function Day7Email() {
   return (
     <Html>
@@ -144,7 +104,7 @@ export default function Day7Email() {
           {/* WazirX logo — x:253 y:7436 w:93 h:93 */}
           <Img src={`${BASE_URL}/assets/day-7/wazirx-logo-E3F3BCD7A9-seeklogo-1.svg`} alt="WazirX" style={{ position: "absolute", top: "7436px", left: "253px", width: "93px", height: "93px", maxWidth: "none", opacity: 1 }} />
 
-          {/* "So, here's for you to get started with cryptocurrency trading..." (WazirX KYC steps) — x:60 y:7550 w:505 h:964 */}
+          {/* "So, here's for you to get started with cryptocurrency trading..." (WazirX KYC steps) — x:60 y:7220 w:505 h:964 */}
           <Img src={`${BASE_URL}/assets/day-7/similar.svg`} alt="So, here's for you to get started with cryptocurrency trading" style={{ position: "absolute", top: "7220px", left: "60px", width: "505px", height: "964px", maxWidth: "none" }} />
 
           {/* Group 1853 (glow) — Figma 921:66722 x:350.29 y:7233.13 */}

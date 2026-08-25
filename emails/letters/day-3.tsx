@@ -4,7 +4,6 @@ import {
   Container,
   Section,
   Text,
-  Link,
   Head,
   Preview,
   Img,

@@ -210,15 +210,15 @@ export default function Day0Email() {
             </Text>
             <ul style={listStyle}>
               <li style={listItem}>
-                Install the <span style={{ color: "#fb923c" }}>Brave</span> browser on your device for a faster, more secure and private browsing experience. It also comes in use for creating a cryptocurrency wallet integrated right into your browser.
+                Install the <Link href="https://brave.com" style={{ color: "#fb923c" }}>Brave</Link> browser on your device for a faster, more secure and private browsing experience. It also comes in use for creating a cryptocurrency wallet integrated right into your browser.
               </li>
             </ul>
             <Text style={bodyText}>
-              And while there, don&apos;t forget to sign up for the <span style={{ color: "#fb923c" }}>Brave Rewards</span> to start earning your first cryptocurrency in the form of Basic Attention Tokens(BAT).
+              And while there, don&apos;t forget to sign up for the <Link href="https://brave.com/brave-rewards/" style={{ color: "#fb923c" }}>Brave Rewards</Link> to start earning your first cryptocurrency in the form of Basic Attention Tokens(BAT).
             </Text>
             <ul style={{ ...listStyle, margin: "0 0 52px" }}>
               <li style={listItem}>
-                Install the <span style={{ color: "#00e5ff" }}>CoinMarketCap App</span> on your phone to keep track of the crypto market anytime, anywhere.
+                Install the <Link href="https://play.google.com/store/apps/details?id=com.coinmarketcap.android" style={{ color: "#00e5ff" }}>CoinMarketCap App</Link> on your phone to keep track of the crypto market anytime, anywhere.
               </li>
               <li style={listItem}>
                 Check out <span style={{ color: "#42ff00" }}>Web3 Words</span> for a stroll around the concepts.

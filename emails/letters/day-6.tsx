@@ -10,50 +10,6 @@ import {
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
-/** Aspect-correct placeholder pinned to its Figma rect, until the real
- *  image is exported from Figma into /assets/day-6/. */
-function ImgBox({
-  label,
-  top,
-  left,
-  width,
-  height,
-}: {
-  label: string;
-  top: number;
-  left: number;
-  width: number;
-  height: number;
-}) {
-  return (
-    <div
-      style={{
-        position: "absolute",
-        top: `${top}px`,
-        left: `${left}px`,
-        width: `${width}px`,
-        height: `${height}px`,
-        borderRadius: "8px",
-        border: "1px dashed rgba(167,139,250,0.5)",
-        background:
-          "repeating-linear-gradient(45deg, rgba(167,139,250,0.06) 0 12px, rgba(167,139,250,0.12) 12px 24px)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        color: "rgba(255,255,255,0.6)",
-        fontFamily: "'Exo 2', sans-serif",
-        fontSize: "13px",
-        letterSpacing: "0.5px",
-        padding: "0 16px",
-        boxSizing: "border-box" as const,
-      }}
-    >
-      {label} · {Math.round(width)}×{Math.round(height)}
-    </div>
-  );
-}
-
 export default function Day6Email() {
   return (
     <Html>

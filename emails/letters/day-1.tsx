@@ -2,46 +2,6 @@ import { Html, Body, Container, Head, Preview, Img, Link } from "@react-email/co
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
-function ImgBox({
-  label,
-  top,
-  left,
-  width,
-  height,
-}: {
-  label: string;
-  top: number;
-  left: number;
-  width: number;
-  height: number;
-}) {
-  return (
-    <div
-      style={{
-        position: "absolute",
-        top: `${top}px`,
-        left: `${left}px`,
-        width: `${width}px`,
-        height: `${height}px`,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        color: "rgba(255,255,255,0.35)",
-        fontFamily: "'Exo 2', sans-serif",
-        fontSize: "13px",
-        letterSpacing: "0.5px",
-        padding: "0 16px",
-        boxSizing: "border-box" as const,
-        border: "1px dashed rgba(167,139,250,0.4)",
-        borderRadius: "6px",
-      }}
-    >
-      {label} · {Math.round(width)}×{Math.round(height)}
-    </div>
-  );
-}
-
 export default function Day1Email() {
   return (
     <Html>
@@ -352,9 +312,6 @@ export default function Day1Email() {
             alt=""
             style={{ position: "absolute", top: "5305px", left: "57px", width: "486px", height: "929px", opacity: 1 }}
           />
-
-          {/* Group 1868 — small icon */}
-          <ImgBox label="Group 1868 (icon)" top={5744} left={68} width={17} height={62} />
 
           {/* D&G — large background image */}
           <Img
