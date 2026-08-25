@@ -3,11 +3,20 @@ import { ScaleToFit } from "@/components/ScaleToFit";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen overflow-y-auto bg-[#0a0a1a] flex items-center justify-center py-2 px-4">
+    <div
+      className="overflow-y-auto bg-[#0a0a1a] flex items-center justify-center"
+      style={{
+        minHeight: "100dvh",
+        paddingTop: "max(8px, env(safe-area-inset-top))",
+        paddingBottom: "max(8px, env(safe-area-inset-bottom))",
+        paddingLeft: "max(16px, env(safe-area-inset-left))",
+        paddingRight: "max(16px, env(safe-area-inset-right))",
+      }}
+    >
 
-      {/* ── 600px card, scaled to fit any viewport ───────────────────────────────────── */}
+      {/* ── 600x800 card (3:4), scaled to fit any viewport without cropping or distorting ── */}
       <div className="w-full" style={{ maxWidth: "600px" }}>
-      <ScaleToFit naturalWidth={600} naturalHeight={800}>
+      <ScaleToFit naturalWidth={600} naturalHeight={800} fitViewportHeight verticalMargin={48} fitViewportHeightBelowWidth={1024}>
       <main className="w-[600px] h-[800px] mx-auto relative overflow-hidden flex flex-col bg-[#09040e] text-white border border-purple-900/30 rounded-none">
 
         {/* ══════════════════════════════════════════════════════════
