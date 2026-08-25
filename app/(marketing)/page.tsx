@@ -3,7 +3,7 @@ import { ScaleToFit } from "@/components/ScaleToFit";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen overflow-y-auto bg-[#0a0a1a] flex items-start justify-center py-2 px-4">
+    <div className="overflow-y-auto bg-[#0a0a1a] flex items-start justify-center py-2 px-4">
 
       {/* ── 600px card, scaled to fit any viewport ───────────────────────────────────── */}
       <div className="w-full" style={{ maxWidth: "600px" }}>
