@@ -26,13 +26,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Hide the browser's scrollbar track/thumb everywhere — scrolling
-   (wheel, trackpad, keyboard) still works, only the visible bar is gone. */
-html {
+/* Hide every scrollbar track/thumb on the page — scrolling (wheel,
+   trackpad, keyboard) still works everywhere, only the visible bar is gone. */
+* {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* legacy Edge/IE */
 }
 
-html::-webkit-scrollbar {
+*::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Chromium-based Edge */
+  width: 0;
+  height: 0;
 }
